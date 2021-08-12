@@ -2,11 +2,11 @@ export default {
     registerCoachActions(context, payload) {
         const coachData = {
             id: 'c' + 9,
-            firstname: payload.firstname,
-            lastname: payload.lastname,
+            firstName: payload.firstname,
+            lastName: payload.lastname,
+            areas: payload.areas,
             description: payload.description,
-            rate: payload.rate,
-            areas: payload.areas
+            hourlyRate: payload.rate,
         };
         context.commit('registerCoach', coachData);
     }
