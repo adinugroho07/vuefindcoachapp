@@ -13,7 +13,9 @@ const coachstate = {
                 areas: ['frontend', 'backend', 'career'],
                 description:
                     "I'm Maximilian and I've worked as a freelance web developer for years. Let me help you become a developer as well!",
-                hourlyRate: 30
+                hourlyRate: 30,
+                username: 'maximilian',
+                password: '123123'
             },
             {
                 id: 'c2',
@@ -22,7 +24,9 @@ const coachstate = {
                 areas: ['backend', 'career'],
                 description:
                     'I am Julie and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
-                hourlyRate: 20
+                hourlyRate: 20,
+                username: 'julie',
+                password: '123123'
             },
             {
                 id: 'c3',
@@ -31,7 +35,9 @@ const coachstate = {
                 areas: ['backend'],
                 description:
                     'I am Julie and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
-                hourlyRate: 70
+                hourlyRate: 70,
+                username: 'adi',
+                password: '123123'
             },
             {
                 id: 'c4',
@@ -40,7 +46,9 @@ const coachstate = {
                 areas: ['career'],
                 description:
                     'I am Julie and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
-                hourlyRate: 10
+                hourlyRate: 10,
+                username: 'mbul',
+                password: '123123'
             },
             {
                 id: 'c5',
@@ -49,7 +57,9 @@ const coachstate = {
                 areas: ['frontend'],
                 description:
                     'I am Julie and as a senior developer in a big tech company, I can help you get your first job or progress in your current role.',
-                hourlyRate: 40
+                hourlyRate: 40,
+                username: 'astri',
+                password: '123123'
             },
         ]
     }),
