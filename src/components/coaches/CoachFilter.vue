@@ -3,18 +3,19 @@
     <h2>Find Your Coach</h2>
     <span class="filter-option">
       <input type="checkbox" id="frontend" checked @change="setFilter" />
-      <label for="frontend"> Frontend</label>
+      <label for="frontend">Frontend</label>
     </span>
     <span class="filter-option">
       <input type="checkbox" id="backend" checked @change="setFilter" />
-      <label for="backend"> Backend</label>
+      <label for="backend">Backend</label>
     </span>
     <span class="filter-option">
       <input type="checkbox" id="career" checked @change="setFilter" />
-      <label for="career"> Career</label>
+      <label for="career">Career</label>
     </span>
   </base-card>
 </template>
+
 <script>
 export default {
   emits: ['change-filter'],
@@ -31,16 +32,17 @@ export default {
     setFilter(event) {
       const inputId = event.target.id;
       const isActive = event.target.checked;
-      const updatedFIlters = {
+      const updatedFilters = {
         ...this.filters,
         [inputId]: isActive
       };
-      this.filters = updatedFIlters;
-      this.$emit('change-filter', updatedFIlters);
+      this.filters = updatedFilters;
+      this.$emit('change-filter', updatedFilters);
     }
   }
-};
+}
 </script>
+
 <style scoped>
 h2 {
   margin: 0.5rem 0;

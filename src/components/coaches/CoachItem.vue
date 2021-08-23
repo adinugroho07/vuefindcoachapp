@@ -1,41 +1,34 @@
 <template>
   <li>
-    <h3>{{ fullname }}</h3>
+    <h3>{{ fullName }}</h3>
     <h4>${{ rate }}/hour</h4>
     <div>
-      <base-badge
-        v-for="area in areas"
-        :key="area"
-        :title="area"
-        :type="area"
-      ></base-badge>
+      <base-badge v-for="area in areas" :key="area" :type="area" :title="area"></base-badge>
     </div>
     <div class="actions">
-      <base-button :link="true" mode="outline" :to="coachContactLink"
-        >Contact</base-button
-      >
-      <base-button :link="true" :to="coachDetailsLink"
-        >View Details</base-button
-      >
+      <base-button mode="outline" link :to="coachContactLink">Contact</base-button>
+      <base-button link :to="coachDetailsLink">View Details</base-button>
     </div>
   </li>
 </template>
+
 <script>
 export default {
-  props: ['id', 'firstname', 'lastname', 'rate', 'areas'],
+  props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
   computed: {
-    fullname() {
-      return this.firstname + ' ' + this.lastname;
+    fullName() {
+      return this.firstName + ' ' + this.lastName;
     },
     coachContactLink() {
-      return this.$route.path + '/' + this.id + '/contact';
+      return this.$route.path + '/' + this.id + '/contact'; // /coaches/c1/contact
     },
     coachDetailsLink() {
-      return this.$route.path + '/' + this.id;
+      return this.$route.path + '/' + this.id; // /coaches/c1
     },
   },
 };
 </script>
+
 <style scoped>
 li {
   margin: 1rem 0;

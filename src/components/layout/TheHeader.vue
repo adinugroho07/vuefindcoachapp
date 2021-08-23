@@ -1,42 +1,21 @@
 <template>
   <header>
     <nav>
-      <h1><router-link to="/">Find A Coach</router-link></h1>
+      <h1>
+        <router-link to="/">Find a Coach</router-link>
+      </h1>
       <ul>
-        <li><router-link to="coaches">All Coaches</router-link></li>
-        <li><router-link to="request">Requests</router-link></li>
-        <li><router-link v-if="!isUserLogin" to="login">Login</router-link></li>
-        <li v-if="isUserLogin">
-          <p>User Login: {{ showUsername }}</p>
+        <li>
+          <router-link to="/coaches">All Coaches</router-link>
         </li>
         <li>
-          <router-link v-if="isUserLogin" @click="logout" to="logout"
-            >Logout</router-link
-          >
+          <router-link to="/requests">Requests</router-link>
         </li>
       </ul>
     </nav>
   </header>
 </template>
-<script>
-export default {
-  computed: {
-    isUserLogin() {
-      return this.$store.getters['getStatusLogin'];
-    },
-    showUsername() {
-      const id = this.$store.getters['getLoginId'];
-      const user = this.$store.getters['coachstate/getSelectedCoach'](id);
-      return user.firstName + ' ' + user.lastName;
-    },
-  },
-  methods: {
-    logout() {
-      this.$store.dispatch('actionsLogout');
-    },
-  },
-};
-</script>
+
 <style scoped>
 header {
   width: 100%;
@@ -59,11 +38,6 @@ a:active,
 a:hover,
 a.router-link-active {
   border: 1px solid #f391e3;
-}
-
-p {
-  padding: 0.75rem 1.5rem;
-  color: #f391e3;
 }
 
 h1 {
